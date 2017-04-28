@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1:3306
--- Généré le :  Jeu 27 Avril 2017 à 08:42
--- Version du serveur :  5.7.17-0ubuntu0.16.04.1
--- Version de PHP :  7.0.15-0ubuntu0.16.04.2
+-- Client :  127.0.0.1
+-- Généré le :  Ven 28 Avril 2017 à 14:32
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -837,6 +837,27 @@ INSERT INTO `terms` (`id`, `term`, `definition1`, `definition2`, `category`, `ex
 (953, 'Loafeur', 'Joueur (sports d\'équipe) qui n\'effectue pas de repli défensif et qui attend l\'occasion de marquer en zone offensive.', NULL, 'v', 'Lui yé bon, mais c\'est un maudit loafeur!', 'Il est bon, mais il ne fait qu\'attendre une occasion de marquer.', NULL, 'Lôfeur', 'nom commun', 'masculin', '', NULL, 1419361358, 1422407838, 0),
 (954, 'pantré', 'Comptoir de cuisine.', NULL, 'd', 'Mets ça sul pantré!', 'Mets cela sur le comptoir!', NULL, NULL, NULL, NULL, '', '"Pantry" est le terme anglais pour désigner l\'endroit où l\'on met la vaisselle, la nourriture.', 1419736177, 1422407919, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(70) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(70) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(6, 'jimmy', 'bootstrap@example.com', '$2y$13$H5sAWTYlrxH2J18fQiQecutB9I0.wT8/9MB6/xyivSH/QMCCqNlMi'),
+(7, 'DgrayMan', 'bootstrap@example.com', '$2y$13$h5zCP80xLtZGqIpuYPY.sOaVTsWfBaxNA4losI.JVhsHI6OyBl56a');
+
 --
 -- Index pour les tables exportées
 --
@@ -848,6 +869,12 @@ ALTER TABLE `terms`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -856,6 +883,11 @@ ALTER TABLE `terms`
 --
 ALTER TABLE `terms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=955;
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
