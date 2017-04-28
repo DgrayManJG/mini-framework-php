@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} | liste{% endblock %}
+
+{% block main %}
+
+    <h1>le term: {{ detailTerm.term }}</h1>
+
+    <h2>Définition: {% if detailTerm.definition1 is empty %}
+                       N/A
+                    {% else %}
+                       {{ detailTerm.definition1 }}
+                    {% endif %}
+    </h2>
+
+    <h2>example: {% if detailTerm.example is empty %}
+                   N/A
+                 {% else %}
+                   {{ detailTerm.example }}
+                 {% endif %}
+    </h2>
+
+    <h2>traduction: {% if detailTerm.translation is empty %}
+                      N/A
+                    {% else %}
+                      {{ detailTerm.translation }}
+                    {% endif %}
+    </h2>
+
+    <h2>variations: {% if detailTerm.variations is empty %}
+                      N/A
+                    {% else %}
+                      {{ detailTerm.variations }}
+                    {% endif %}
+    </h2>
+
+    <h2>prononciation: {% if detailTerm.pronunciation is empty %}
+                        N/A
+                       {% else %}
+                        {{ detailTerm.pronunciation }}
+                       {% endif %}
+    </h2>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent () }} {# blabla #}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} | liste{% endblock %}
+
+{% block main %}
+  <label for="filter-field">Rechercher..</label>
+  <input type="text" id="filter-field">
+
+  <ul id="terms-list">
+    {% for listTerms in listTerm %}
+      <li><a href="?page=detail&id={{ listTerms.id }}">{{ listTerms.term }}</li></a>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent () }}
+  <script src="Assets/js/filter.js" charset="utf-8"></script>
+{% endblock %}

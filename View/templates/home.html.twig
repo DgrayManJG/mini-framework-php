@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} | home{% endblock %}
+
+{% block main %}
+  <h1>Dashboard</h1>
+  <h2>{{ randomTerm.term }}</h2>
+  <h2>{{ randomTerm.definition1 }}</h2>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent () }} {# blabla #}
+  <script src="Assets/js/home.js" charset="utf-8"></script>
+{% endblock %}

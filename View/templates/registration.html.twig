@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} | Inscription{% endblock %}
+
+{% block main %}
+<br>
+<br>
+
+<h1>Inscription</h1>
+<br>
+
+<form class="?page=inscription" method="post">
+
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">username</label>
+    <div class="col-10">
+      <input class="form-control" type="text" name="username" value="{% if param.username is empty %}jimmy{% else %}{{ param.username }}{% endif %}" id="example-text-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="example-email-input" class="col-2 col-form-label">Email</label>
+    <div class="col-10">
+      <input class="form-control" type="email" name="email" value="{% if param.email is empty %}bootstrap@example.com{% else %}{{ param.email }}{% endif %}" id="example-email-input">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="example-password-input" class="col-2 col-form-label">Password</label>
+    <div class="col-10">
+      <input class="form-control" type="password" name="password" value="{% if param.password is empty %}{% else %}{{ param.password }}{% endif %}" id="example-password-input">
+    </div>
+  </div>
+
+  <button type="submit" name="button">submit</button>
+</form>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent () }}
+{% endblock %}
