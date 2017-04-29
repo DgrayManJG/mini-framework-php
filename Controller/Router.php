@@ -19,6 +19,11 @@ class Router
         $controller->faq();
         break;
 
+      case "vuejs":
+        $controller = new \Controller\PageController();
+        $controller->vuejs();
+        break;
+
       case "list":
         $controller = new \Controller\TermController();
         $controller->liste();

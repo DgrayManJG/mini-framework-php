@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} | Inscription{% endblock %}
+
+{% block main %}
+
+<div class="">
+    <h1>Tuto VueJS</h1>
+</div>
+
+{% verbatim %}
+  <div id="app">
+    <a :href="link" :title="message">{{ message }}</a>
+
+    <div class="alert alert-success" v-if="success">
+      <p>Bravo votre enregistrement à été validé</p>
+    </div>
+    <div class="alert alert-danger" v-else>
+      <p>Echec</p>
+    </div>
+
+
+    <ul class="list-group">
+      <li class="list-group-item" v-for="person in persons">{{ person }}</li>
+    </ul>
+
+  </div>
+{% endverbatim %}
+
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent () }}
+  <script src="https://unpkg.com/vue"></script>
+  <script src="Assets/js/vuejs.js" charset="utf-8"></script>
+{% endblock %}

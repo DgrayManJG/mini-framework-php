@@ -43,55 +43,55 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
   ";
         // line 17
         $this->displayBlock('top_bar', $context, $blocks);
-        // line 61
+        // line 64
         echo "
     <div class=\"container-fluid\">
       <div class=\"row\">
 
       ";
-        // line 65
+        // line 68
         $this->displayBlock('left_bar', $context, $blocks);
-        // line 92
+        // line 95
         echo "
         <main class=\"col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3\">
           ";
-        // line 94
+        // line 97
         if (twig_test_empty($this->getAttribute((isset($context["session"]) ? $context["session"] : null), "errors", array()))) {
-            // line 95
+            // line 98
             echo "          ";
         } else {
-            // line 96
+            // line 99
             echo "          <div class=\"alert alert-danger\">
             <strong>Danger!</strong> ";
-            // line 97
+            // line 100
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["session"]) ? $context["session"] : null), "errors", array()), "html", null, true);
             echo ".
           </div>
           ";
         }
-        // line 100
+        // line 103
         echo "
           ";
-        // line 101
+        // line 104
         if (twig_test_empty($this->getAttribute((isset($context["session"]) ? $context["session"] : null), "success", array()))) {
-            // line 102
+            // line 105
             echo "          ";
         } else {
-            // line 103
+            // line 106
             echo "          <div class=\"alert alert-success\">
             <strong>Success!</strong> ";
-            // line 104
+            // line 107
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["session"]) ? $context["session"] : null), "success", array()), "html", null, true);
             echo ".
           </div>
           ";
         }
-        // line 107
+        // line 110
         echo "          ";
-        // line 108
+        // line 111
         echo "          ";
         $this->displayBlock('main', $context, $blocks);
-        // line 109
+        // line 112
         echo "
         </main>
 
@@ -99,9 +99,9 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
     </div>
 
     ";
-        // line 115
+        // line 118
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 119
+        // line 122
         echo "
   </body>
 </html>
@@ -135,13 +135,16 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"?page=faq\">FAQ</a>
           </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"?page=vuejs\">VueJS</a>
+          </li>
         </ul>
         <form class=\"form-inline mt-2 mt-md-0\">
           <ul class=\"navbar-nav mr-auto\">
             ";
-        // line 38
+        // line 41
         if (twig_test_empty($this->getAttribute((isset($context["session"]) ? $context["session"] : null), "username", array()))) {
-            // line 39
+            // line 42
             echo "            <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"?page=connection\">Connection</a>
             </li>
@@ -150,10 +153,10 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
             </li>
             ";
         } else {
-            // line 46
+            // line 49
             echo "            <li class=\"nav-item\">
               <a class=\"nav-link\">Bonjour ";
-            // line 47
+            // line 50
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["session"]) ? $context["session"] : null), "username", array()), "html", null, true);
             echo "</a>
             </li>
@@ -162,7 +165,7 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
             </li>
             ";
         }
-        // line 53
+        // line 56
         echo "
           </ul>
           <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">
@@ -173,12 +176,12 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
   ";
     }
 
-    // line 65
+    // line 68
     public function block_left_bar($context, array $blocks = array())
     {
-        // line 66
+        // line 69
         echo "        <nav class=\"col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar\">
-          <ul class=\"nav nav-pills flex-column\">
+          <!-- <ul class=\"nav nav-pills flex-column\">
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"#\">Overview <span class=\"sr-only\">(current)</span></a>
             </li>
@@ -200,20 +203,20 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
             <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"#\">Nav item again</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
         ";
     }
 
-    // line 108
+    // line 111
     public function block_main($context, array $blocks = array())
     {
     }
 
-    // line 115
+    // line 118
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 116
+        // line 119
         echo "      <script src=\"Assets/js/jquery-3.2.1.min.js\" charset=\"utf-8\"></script>
       <script src=\"Assets/js/bootstrap.min.js\" charset=\"utf-8\"></script>
     ";
@@ -231,7 +234,7 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
 
     public function getDebugInfo()
     {
-        return array (  217 => 116,  214 => 115,  209 => 108,  180 => 66,  177 => 65,  166 => 53,  157 => 47,  154 => 46,  145 => 39,  143 => 38,  121 => 18,  118 => 17,  112 => 9,  105 => 119,  103 => 115,  95 => 109,  92 => 108,  90 => 107,  84 => 104,  81 => 103,  78 => 102,  76 => 101,  73 => 100,  67 => 97,  64 => 96,  61 => 95,  59 => 94,  55 => 92,  53 => 65,  47 => 61,  45 => 17,  34 => 9,  24 => 1,);
+        return array (  220 => 119,  217 => 118,  212 => 111,  183 => 69,  180 => 68,  169 => 56,  160 => 50,  157 => 49,  148 => 42,  146 => 41,  121 => 18,  118 => 17,  112 => 9,  105 => 122,  103 => 118,  95 => 112,  92 => 111,  90 => 110,  84 => 107,  81 => 106,  78 => 105,  76 => 104,  73 => 103,  67 => 100,  64 => 99,  61 => 98,  59 => 97,  55 => 95,  53 => 68,  47 => 64,  45 => 17,  34 => 9,  24 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -278,6 +281,9 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"?page=faq\">FAQ</a>
           </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"?page=vuejs\">VueJS</a>
+          </li>
         </ul>
         <form class=\"form-inline mt-2 mt-md-0\">
           <ul class=\"navbar-nav mr-auto\">
@@ -310,7 +316,7 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
 
       {% block left_bar %}
         <nav class=\"col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar\">
-          <ul class=\"nav nav-pills flex-column\">
+          <!-- <ul class=\"nav nav-pills flex-column\">
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"#\">Overview <span class=\"sr-only\">(current)</span></a>
             </li>
@@ -332,7 +338,7 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
             <li class=\"nav-item\">
               <a class=\"nav-link\" href=\"#\">Nav item again</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
         {% endblock %}
 

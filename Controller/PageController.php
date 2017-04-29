@@ -20,13 +20,20 @@ class PageController extends Controller
     $this->render('home.html.twig', array('randomTerm' => $randomTerm));
   }
 
-
   /**
   * page d'accueil
   */
   public function faq()
   {
     $this->render('faq.html.twig');
+  }
+
+  /**
+  * page VueJS
+  */
+  public function vuejs()
+  {
+    $this->render('vuejs.html.twig');
   }
 
 }
