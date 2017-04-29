@@ -43,7 +43,7 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 </div>
 
 ";
-        // line 28
+        // line 29
         echo "
   <div id=\"app\">
     <a :href=\"link\" :title=\"message\">{{ message }}</a>
@@ -56,6 +56,7 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
     </div>
 
 
+
     <ul class=\"list-group\">
       <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
     </ul>
@@ -64,14 +65,17 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 ";
         echo "
 
+";
+        // line 33
+        echo "
 
 ";
     }
 
-    // line 33
+    // line 37
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 34
+        // line 38
         echo "  ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -92,7 +96,7 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 
     public function getDebugInfo()
     {
-        return array (  75 => 34,  72 => 33,  47 => 28,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
+        return array (  79 => 38,  76 => 37,  70 => 33,  47 => 29,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -127,12 +131,16 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
     </div>
 
 
+
     <ul class=\"list-group\">
       <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
     </ul>
 
   </div>
 {% endverbatim %}
+
+{# suivre cette video #}
+{# https://www.youtube.com/watch?v=XkgiXngcpWk je suis a 11:28 min #}
 
 
 {% endblock %}
