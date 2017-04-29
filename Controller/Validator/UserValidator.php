@@ -3,7 +3,7 @@ namespace Controller\Validator;
 
 use Model\UserManager;
 /**
- *
+ * class qui réalise toute les validations pour l'utilisateur
  */
 class UserValidator
 {
