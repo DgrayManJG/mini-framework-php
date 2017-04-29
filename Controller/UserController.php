@@ -15,10 +15,10 @@ class UserController extends Controller
     if (!empty($post)) {
       $UserValidator = new UserValidator();
       $data = $UserValidator->subscribeValidate($post);
+      $userManager = new UserManager();
       $security = new Security();
 
-      if ($data['validate'] === true) {
-        $userManager = new UserManager();
+      if ($data['validate']) {
         $return = $userManager->insertUser($data);
         if ($return) {
           $security->initSession(array('success' => "L'utilisateur à bien été enregistrer, vous pouvez maintenant vous connecter"));
