@@ -12,7 +12,6 @@ class TermController extends Controller
   /**
   * liste des terms
   */
-
   public function liste()
   {
     $termManager = new TermManager();

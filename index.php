@@ -8,6 +8,7 @@ include('config.php');
 include('vendor/autoload.php');
 //  cette fonctione st appeler par php, en nous passant le nom de la classe qu'il cherche
 // c'est notre derniere chance de faire l'include
+
 spl_autoload_register(function($className){
   $className = str_replace("\\", DIRECTORY_SEPARATOR, $className);
   include($className . ".php");
@@ -20,6 +21,6 @@ $router = new \Controller\Router();
 $router->execute($page);
 
 // j'efface la session errors pour qu'elle devienne éphémere, pareille pour session success
-unset($_SESSION['errors']);
-unset($_SESSION['success']);
+$security = new \Controller\Security();
+$security->unsetSession(array('errors','success'));
 ?>

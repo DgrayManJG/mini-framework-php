@@ -365,6 +365,6 @@ class __TwigTemplate_8e6111fc103f079de2dd516949704387b5455d1fb4fff76c1d5371a5c26
 
   </body>
 </html>
-", "layout.html.twig", "C:\\wamp64\\www\\wiki\\View\\templates\\layout.html.twig");
+", "layout.html.twig", "C:\\xampp\\htdocs\\mini-framework-php\\View\\templates\\layout.html.twig");
     }
 }
