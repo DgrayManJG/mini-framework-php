@@ -53,7 +53,7 @@ class UserController extends Controller
     }
   }
 
-  public function deconnexion($post)
+  public function deconnexion()
   {
     $security = new Security();
     $security->unsetSession(array('username'));
