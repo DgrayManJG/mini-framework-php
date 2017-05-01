@@ -10,18 +10,20 @@
 
 {% verbatim %}
   <div id="app">
-    <a :href="link" :title="message">{{ message }}</a>
+
+    <!-- <a :href="link" :title="message">{# message #}</a> -->
 
     <div class="alert alert-success" v-if="success">
       <p>Bravo votre enregistrement à été validé</p>
     </div>
+
     <div class="alert alert-danger" v-else>
       <p>Echec</p>
     </div>
-
+    <!--
     <ul class="list-group">
-      <li class="list-group-item" v-for="person in persons">{{ person }}</li>
-    </ul>
+      <li class="list-group-item" v-for="person in persons">{# person #}</li>
+    </ul> -->
 
   </div>
 {% endverbatim %}

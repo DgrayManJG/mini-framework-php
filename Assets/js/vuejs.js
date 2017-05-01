@@ -4,7 +4,7 @@ var app = new Vue({
   data: {
     message: 'Hello Vue!',
     link: '?page=vuejs',
-    success: false,
+    success: true,
     persons: ['joe', 'will', 'sam']
   }
 })

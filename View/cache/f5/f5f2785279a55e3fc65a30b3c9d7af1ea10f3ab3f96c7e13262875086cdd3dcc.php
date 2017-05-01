@@ -43,37 +43,39 @@ class __TwigTemplate_4fdac24cece46662f4078ed2e6cce9860bae04d606a9ff429a47cd566f9
 </div>
 
 ";
-        // line 27
+        // line 29
         echo "
   <div id=\"app\">
-    <a :href=\"link\" :title=\"message\">{{ message }}</a>
+
+    <!-- <a :href=\"link\" :title=\"message\">{# message #}</a> -->
 
     <div class=\"alert alert-success\" v-if=\"success\">
       <p>Bravo votre enregistrement à été validé</p>
     </div>
+
     <div class=\"alert alert-danger\" v-else>
       <p>Echec</p>
     </div>
-
+    <!--
     <ul class=\"list-group\">
-      <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
-    </ul>
+      <li class=\"list-group-item\" v-for=\"person in persons\">{# person #}</li>
+    </ul> -->
 
   </div>
 ";
         echo "
 
 ";
-        // line 31
+        // line 33
         echo "
 
 ";
     }
 
-    // line 35
+    // line 37
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 36
+        // line 38
         echo "  ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -94,7 +96,7 @@ class __TwigTemplate_4fdac24cece46662f4078ed2e6cce9860bae04d606a9ff429a47cd566f9
 
     public function getDebugInfo()
     {
-        return array (  77 => 36,  74 => 35,  68 => 31,  47 => 27,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
+        return array (  79 => 38,  76 => 37,  70 => 33,  47 => 29,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -119,18 +121,20 @@ class __TwigTemplate_4fdac24cece46662f4078ed2e6cce9860bae04d606a9ff429a47cd566f9
 
 {% verbatim %}
   <div id=\"app\">
-    <a :href=\"link\" :title=\"message\">{{ message }}</a>
+
+    <!-- <a :href=\"link\" :title=\"message\">{# message #}</a> -->
 
     <div class=\"alert alert-success\" v-if=\"success\">
       <p>Bravo votre enregistrement à été validé</p>
     </div>
+
     <div class=\"alert alert-danger\" v-else>
       <p>Echec</p>
     </div>
-
+    <!--
     <ul class=\"list-group\">
-      <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
-    </ul>
+      <li class=\"list-group-item\" v-for=\"person in persons\">{# person #}</li>
+    </ul> -->
 
   </div>
 {% endverbatim %}
