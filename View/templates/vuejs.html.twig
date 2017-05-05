@@ -11,19 +11,9 @@
 {% verbatim %}
   <div id="app">
 
-    <!-- <a :href="link" :title="message">{# message #}</a> -->
+    {{ persons }}
 
-    <div class="alert alert-success" v-if="success">
-      <p>Bravo votre enregistrement à été validé</p>
-    </div>
-
-    <div class="alert alert-danger" v-else>
-      <p>Echec</p>
-    </div>
-    <!--
-    <ul class="list-group">
-      <li class="list-group-item" v-for="person in persons">{# person #}</li>
-    </ul> -->
+    <button @click="addPerson">Ajouter une personne</button>
 
   </div>
 {% endverbatim %}

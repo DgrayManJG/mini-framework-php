@@ -43,39 +43,29 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 </div>
 
 ";
-        // line 29
+        // line 19
         echo "
   <div id=\"app\">
-    <a :href=\"link\" :title=\"message\">{{ message }}</a>
 
-    <div class=\"alert alert-success\" v-if=\"success\">
-      <p>Bravo votre enregistrement à été validé</p>
-    </div>
-    <div class=\"alert alert-danger\" v-else>
-      <p>Echec</p>
-    </div>
+    {{ persons }}
 
-
-
-    <ul class=\"list-group\">
-      <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
-    </ul>
+    <button @click=\"addPerson\">Ajouter une personne</button>
 
   </div>
 ";
         echo "
 
 ";
-        // line 33
+        // line 23
         echo "
 
 ";
     }
 
-    // line 37
+    // line 27
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 38
+        // line 28
         echo "  ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -96,7 +86,7 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 
     public function getDebugInfo()
     {
-        return array (  79 => 38,  76 => 37,  70 => 33,  47 => 29,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
+        return array (  69 => 28,  66 => 27,  60 => 23,  47 => 19,  40 => 6,  37 => 5,  30 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -121,20 +111,10 @@ class __TwigTemplate_e0a96043956dfb331e8677d1a2297c06bbbfe66b1e59f3a5f36494f42ac
 
 {% verbatim %}
   <div id=\"app\">
-    <a :href=\"link\" :title=\"message\">{{ message }}</a>
 
-    <div class=\"alert alert-success\" v-if=\"success\">
-      <p>Bravo votre enregistrement à été validé</p>
-    </div>
-    <div class=\"alert alert-danger\" v-else>
-      <p>Echec</p>
-    </div>
+    {{ persons }}
 
-
-
-    <ul class=\"list-group\">
-      <li class=\"list-group-item\" v-for=\"person in persons\">{{ person }}</li>
-    </ul>
+    <button @click=\"addPerson\">Ajouter une personne</button>
 
   </div>
 {% endverbatim %}
